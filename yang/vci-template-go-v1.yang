@@ -1,0 +1,43 @@
+// SPDX-License-Identifier: MIT-0
+module vci-template-go-v1 {
+	namespace "urn:vyatta.com:mgmt:vci-template-go:1";
+	prefix vci-template-go-v1;
+
+	organization "AT&T Inc.";
+	contact
+		"AT&T
+         Postal: 208 S. Akard Street
+         Dallas, TX 25202
+         Web: www.att.com";
+
+	description
+		"Copyright (c) 2019, AT&T Intellectual Property.
+         All rights reserved.
+
+		 Demonstration datamodel for a VCI template in the Go programming language";
+
+	revision 2019-01-17 {
+		description "Initial version";
+	}
+	container vci-template-go {
+		presence "Indicates the template module is enabled";
+		container state {
+			config false;
+			leaf "foo" {
+				type string;
+			}
+		}
+	}
+	rpc rpc1 {
+		input {
+			leaf data {
+				type string;
+			}
+		}
+		output {
+			leaf data {
+				type string;
+			}
+		}
+	}
+}

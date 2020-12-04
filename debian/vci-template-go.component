@@ -1,0 +1,9 @@
+[Vyatta Component]
+Name=net.vyatta.eng.vci.template-go
+Description=VCI Template in the Go programming language
+ExecName=/lib/vci-template-go/vci-template-go
+ConfigFile=/dev/null
+
+[Model net.vyatta.eng.vci.template-go.v1]
+Modules=vci-template-go-v1
+ModelSets=vyatta-v1

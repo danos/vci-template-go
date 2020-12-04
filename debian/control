@@ -1,0 +1,25 @@
+Source: vci-template-go
+Section: contrib/net
+Priority: extra
+Maintainer: Vyatta Package Maintainers <maintainers@vyatta.com>
+Build-Depends: debhelper (>= 9),
+ dh-golang,
+ dh-vci,
+ dh-yang,
+ golang-any,
+ golang-github-danos-vci-dev,
+Standards-Version: 3.9.8
+
+Package: vci-template-go
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: VCI template for the Go programming language
+ A template to help one get started writing a VCI component in Go.
+
+Package: vci-template-go-v1-yang
+Architecture: all
+Depends: vci-template-go (>= ${binary:Version}), ${yang:Depends}
+Section: admin
+Priority: optional
+Description: VCI Go template YANG file
+ The YANG definition for the VCI Go template
